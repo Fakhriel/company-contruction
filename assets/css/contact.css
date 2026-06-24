@@ -1,0 +1,136 @@
+/* =========================================================
+   CONTACT + MAP
+========================================================= */
+.section-contact {
+    background: var(--color-offwhite-100);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+/* --- Form --- */
+.contact-form {
+    background: var(--color-white);
+    border: 1px solid var(--color-offwhite-200);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xs);
+}
+
+.form-row-split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+}
+
+.form-row-split > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xs);
+}
+
+.form-optional {
+    font-weight: 400;
+    color: var(--color-concrete-500);
+    text-transform: none;
+}
+
+.form-row label {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-charcoal-800);
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea,
+.form-row-split input {
+    border: 1.5px solid var(--color-offwhite-200);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 0.875rem;
+    background: var(--color-offwhite-100);
+    transition: border-color var(--transition-base);
+    resize: vertical;
+    width: 100%;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus,
+.form-row-split input:focus {
+    border-color: var(--color-safety-orange);
+    background: var(--color-white);
+}
+
+@media (min-width: 480px) {
+    .form-row-split {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.form-status {
+    font-size: 0.875rem;
+    text-align: center;
+    min-height: 1.2em;
+}
+
+.form-status.is-success { color: var(--color-success); }
+.form-status.is-error { color: var(--color-safety-orange-dark); }
+
+/* --- Sisi kanan: info + map --- */
+.contact-side {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.contact-info-card {
+    background: var(--color-charcoal-900);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    color: var(--color-offwhite-100);
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.contact-info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-xs);
+    font-size: 0.9375rem;
+    color: var(--color-concrete-300);
+}
+
+.contact-info-list li .icon {
+    color: var(--color-safety-orange);
+    margin-top: 0.15em;
+}
+
+.map-frame {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--color-offwhite-200);
+}
+
+@media (min-width: 960px) {
+    .contact-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: start;
+    }
+}

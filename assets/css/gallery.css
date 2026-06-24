@@ -1,0 +1,75 @@
+/* =========================================================
+   GALLERY
+========================================================= */
+.section-gallery {
+    background: var(--color-charcoal-900);
+}
+
+.section-gallery .section-title {
+    color: var(--color-offwhite-100);
+}
+
+.section-gallery .section-desc {
+    color: var(--color-concrete-300);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--color-charcoal-700);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-caption {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: var(--space-md) var(--space-sm) var(--space-sm);
+    background: linear-gradient(180deg, transparent, rgba(20, 22, 26, 0.92) 75%);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xs);
+}
+
+.gallery-judul {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: var(--color-offwhite-100);
+}
+
+.gallery-lokasi {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3xs);
+    font-size: 0.8125rem;
+    color: var(--color-safety-orange-light);
+}
+
+@media (min-width: 640px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 960px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

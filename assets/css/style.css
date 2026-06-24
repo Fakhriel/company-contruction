@@ -1,0 +1,15 @@
+/* =========================================================
+   STYLE.CSS — Entry point
+   Landing Page Kontraktor Bangunan
+   Urutan import penting: base -> komponen -> per-section
+========================================================= */
+@import url("base.css");
+@import url("components.css");
+@import url("header.css");
+@import url("hero.css");
+@import url("services.css");
+@import url("gallery.css");
+@import url("faq.css");
+@import url("cta-end.css");
+@import url("contact.css");
+@import url("footer.css");
